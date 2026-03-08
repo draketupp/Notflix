@@ -90,9 +90,12 @@ const HeroCarousel = ({ movies }: Props) => {
     <div className="relative w-full group">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {movies.slice(0, 5).map((movie) => {
+          {(movies ?? []).slice(0, 5).map((movie) => {
+            // your existing map code...
             const trailer = getTrailer(movie.id);
-
+            // etc.
+          })}
+        </div>
             return (
               <div key={movie?.id} className="flex-[0_0_100%] min-w-0 relative">
                 <div className="relative aspect-video w-full">
