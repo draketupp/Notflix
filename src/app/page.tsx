@@ -70,7 +70,7 @@ export default async function Home() {
           <GenreSpotlight
             title="Critically Acclaimed"
             description="Award-winning films and cinematic masterpieces"
-            movies={topRatedMovies.slice(4, 8)}
+            movies={Array.isArray(topRatedMovies) ? topRatedMovies.slice(4, 8) : []}
             genreId={18}
           />
         </MotionSection>
